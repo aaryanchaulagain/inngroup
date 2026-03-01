@@ -12,7 +12,7 @@
 
 <div class="flex min-h-screen">
     <!-- Left Side Image -->
-    <div class="hidden md:flex w-1/2 bg-cover bg-center" style="background-image: url('https://ozconnectedu.com.au/wp-content/uploads/2023/06/admin-login.jpg');"></div>
+    <div class="hidden md:flex w-1/2 bg-cover bg-center" style="background-image: url('{{ asset('image/s.jpg') }}');"></div>
 
     <!-- Right Side Form -->
     <div class="flex flex-col justify-center items-center w-full md:w-1/2 p-10">

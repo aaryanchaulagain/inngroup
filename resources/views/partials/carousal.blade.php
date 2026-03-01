@@ -23,13 +23,13 @@
   <div class="card">
     <img src="{{ asset('image/homeloan.jpg') }}" alt="Home Loans">
     <h3>Home Loans</h3>
-    <p>Helping first home buyers and investors get the best  deals.</p>
+  <p>Helping first home buyers and investors get the best property deals quickly and easily.</p>
     <a href="http://innovativewealth.com.au/" target="_blank">Learn More</a>
   </div>
   <div class="card">
     <img src="{{ asset('image/insurance.jpg') }}" alt="Insurance">
     <h3>Insurance</h3>
-    <p>Protecting your assets and loved ones in current market situations.</p>
+   <p>Protecting your assets and loved ones in current market situations and uncertain economic times.</p>
     <a href="https://insurancesite.com" target="_blank">Learn More</a>
   </div>
 </section>

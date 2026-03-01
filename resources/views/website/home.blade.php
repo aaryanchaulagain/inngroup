@@ -60,7 +60,7 @@
             <h2>Our mission is to put <span>you first</span>, and serve you best.</h2>
             <p>We’ll be right by your side, guiding you with expert care until your matter is fully settled.</p>
 
-            <a href="#" class="btn-modern">
+            <a href="/contact" class="btn-modern">
                 Get in touch
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -85,42 +85,42 @@
             <div class="icon-box">📋</div>
             <h3>Accounting</h3>
             <p>Dedicated to providing quality, professional accounting solutions tailored for small and medium businesses.</p>
-            <a href="#" class="btn-learn">Learn More</a>
+            <a href="/contact" class="btn-learn">Learn More</a>
         </div>
 
         <div class="card">
             <div class="icon-box">🏛️</div>
             <h3>Taxation</h3>
             <p>From individual tax returns to complex company structures, we handle all taxation matters in one place.</p>
-            <a href="#" class="btn-learn">Learn More</a>
+            <a href="/contact" class="btn-learn">Learn More</a>
         </div>
 
         <div class="card">
             <div class="icon-box">🏠</div>
             <h3>Home Loans</h3>
             <p>First home buyers, investment properties, or commercial refinancing—we take care of the details for you.</p>
-            <a href="#" class="btn-learn">Learn More</a>
+            <a href="/contact" class="btn-learn">Learn More</a>
         </div>
 
         <div class="card">
             <div class="icon-box">⚖️</div>
             <h3>Bookkeeping</h3>
             <p>Customised, flexible, and cost-effective bookkeeping and payroll solutions for your growing business.</p>
-            <a href="#" class="btn-learn">Learn More</a>
+            <a href="/contact" class="btn-learn">Learn More</a>
         </div>
 
         <div class="card">
             <div class="icon-box">🛡️</div>
             <h3>Insurances</h3>
             <p>Personal, life, or general insurance matters—our associated experts are here to guide your protection.</p>
-            <a href="#" class="btn-learn">Learn More</a>
+            <a href="/contact" class="btn-learn">Learn More</a>
         </div>
 
         <div class="card">
             <div class="icon-box">🇳🇵</div>
             <h3>Legal Remit</h3>
             <p>Legal remit to Nepal at your fingertips. Download our app and send money instantly and securely.</p>
-            <a href="#" class="btn-learn">Learn More</a>
+            <a href="/contact" class="btn-learn">Learn More</a>
         </div>
     </div>
 </div>
