@@ -31,4 +31,8 @@
     </nav>
 
 
-
+<script>
+function toggleMenu() {
+    document.getElementById("navContent").classList.toggle("active");
+}
+</script>

@@ -1,0 +1,369 @@
+:root {
+    --primary-dark: #1a1a1a;
+    --accent-gold: #c5a059;
+    --text-gray: #555;
+    --bg-light: #fdfdfd;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--primary-dark);
+    /* Improves text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+.section-container {
+    max-width: 1200px;
+    /* Responsive margins: 40px on mobile, 80px on desktop */
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); /* Fluid typography */
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Divider Decoration */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.divider::before, .divider::after {
+    content: "";
+    height: 1px;
+    width: 30px; /* Shorter for mobile */
+    background: #ddd;
+}
+.divider span {
+    margin: 0 10px;
+    font-size: 1rem;
+    color: var(--accent-gold);
+}
+
+/* Grid Layout - The heart of responsiveness */
+.services-grid {
+    display: grid;
+    /* minmax(280px...) ensures cards don't get too narrow on small screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Modern Card Design */
+.service-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: var(--accent-gold);
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 200px; /* Slightly shorter for better vertical flow */
+    overflow: hidden;
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+    filter: grayscale(20%);
+}
+
+.service-card:hover .image-wrapper img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.card-content {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1; /* Ensures cards in a row are same height */
+}
+
+.card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    transition: var(--transition);
+}
+
+/* Media Queries for Fine-Tuning */
+@media (min-width: 768px) {
+    .section-container { margin: 80px auto; }
+    .divider::before, .divider::after { width: 50px; }
+    .divider span { margin: 0 15px; font-size: 1.2rem; }
+    .services-grid { gap: 30px; }
+    .image-wrapper { height: 220px; }
+}
+
+/* Fix for very small screens (under 350px) */
+@media (max-width: 350px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== PREMIUM CTA SECTION ===== */
+.premium-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0f172a, #111827);
+    position: relative;
+}
+
+/* Remove dangerous overflow rules */
+/* DO NOT add overflow:hidden to body */
+
+.premium-cta .container {
+    position: relative;
+    z-index: 2;
+}
+
+.content-box {
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 700px;
+    margin: auto;
+}
+
+.content-box h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.content-box h2 span {
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content-box p {
+    color: #d1d5db;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.btn-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    transition: 0.3s ease;
+}
+
+.btn-modern:hover {
+    transform: translateY(-3px);
+}
+
+/* Area of expertise css
+/* :root {
+    --primary-blue: #0f2747;
+    --accent-gold: #d4af37;
+    --bg-light: #f4f7fb;
+    --text-dark: #0f172a;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --border-light: rgba(255, 255, 255, 0.4);
+    --shadow-soft: 0 20px 60px rgba(15, 39, 71, 0.08);
+    --shadow-hover: 0 30px 80px rgba(15, 39, 71, 0.18);
+} */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 0px 0px 0px;
+
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.header-section h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-section p {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+/* PREMIUM GLASS CARD */
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 24px;
+    padding: 50px 35px;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+}
+
+/* Subtle glowing border animation */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1px;
+    background: linear-gradient(120deg, transparent, var(--accent-gold), transparent);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Icon */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-blue), #1e3a8a);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    color: white;
+    font-size: 32px;
+    box-shadow: 0 10px 25px rgba(15, 39, 71, 0.2);
+    transition: all 0.4s ease;
+}
+
+.card:hover .icon-box {
+    background: linear-gradient(135deg, var(--accent-gold), #b8962e);
+    transform: rotate(-6deg) scale(1.1);
+}
+
+/* Title */
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: var(--primary-blue);
+}
+
+/* Description */
+.card p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* PREMIUM BUTTON */
+.btn-learn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn-learn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--primary-blue);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.btn-learn:hover::before {
+    width: 100%;
+}
+
+.btn-learn:hover {
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .header-section h2 {
+        font-size: 2rem;
+    }
+}

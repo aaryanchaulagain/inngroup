@@ -1,0 +1,262 @@
+/* ===============================
+   PREMIUM EXPERTISE SECTION
+   Senior-Level Production CSS
+=================================*/
+
+/* ---------- GLOBAL SAFE RESET ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* ---------- DESIGN SYSTEM ---------- */
+:root {
+    --primary-blue: #0f2747;
+    --accent-gold: #d4af37;
+    --bg-light: #f4f7fb;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --border-light: rgba(255, 255, 255, 0.5);
+
+    --shadow-soft: 0 20px 60px rgba(15, 39, 71, 0.08);
+    --shadow-hover: 0 35px 90px rgba(15, 39, 71, 0.18);
+
+    --radius-xl: 28px;
+    --radius-lg: 22px;
+    --transition-smooth: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- SECTION WRAPPER ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 0;
+}
+
+/* ---------- HEADER ---------- */
+.header-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.header-section h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* ---------- GRID LAYOUT ---------- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: var(--radius-xl);
+    padding: 55px 40px;
+    text-align: center;
+
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Premium animated glow border */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-xl);
+    padding: 1px;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        var(--accent-gold),
+        transparent
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* ---------- ICON ---------- */
+.icon-box {
+    width: 85px;
+    height: 85px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+
+    background: linear-gradient(135deg, var(--primary-blue), #1e3a8a);
+    color: white;
+    font-size: 34px;
+
+    box-shadow: 0 15px 30px rgba(15, 39, 71, 0.2);
+    transition: var(--transition-smooth);
+}
+
+.card:hover .icon-box {
+    background: linear-gradient(135deg, var(--accent-gold), #b8962e);
+    transform: rotate(-6deg) scale(1.1);
+}
+
+/* ---------- TITLE ---------- */
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: var(--primary-blue);
+}
+
+/* ---------- DESCRIPTION ---------- */
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+/* ---------- BUTTON ---------- */
+.btn-learn {
+    position: relative;
+    display: inline-block;
+    padding: 13px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    text-decoration: none;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.btn-learn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    background: var(--primary-blue);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.btn-learn:hover::before {
+    width: 100%;
+}
+
+.btn-learn:hover {
+    color: white;
+}
+
+/* ======================================
+   RESPONSIVE BREAKPOINTS
+======================================*/
+
+/* ---- Large Tablet ---- */
+@media (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+/* ---- Tablet ---- */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 60px 18px 0;
+    }
+
+    .header-section {
+        margin-bottom: 60px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .card {
+        padding: 40px 30px;
+        border-radius: 22px;
+    }
+
+    .icon-box {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        margin-bottom: 28px;
+    }
+
+    .btn-learn {
+        width: 100%;
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ---- Small Phones ---- */
+@media (max-width: 420px) {
+
+    .header-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .card {
+        padding: 35px 22px;
+    }
+}

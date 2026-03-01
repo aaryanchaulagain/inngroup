@@ -32,24 +32,32 @@
         </div>
 
         <!-- Social -->
-        <div class="footer-col">
-            <h4 class="footer-title">Follow Us</h4>
-            <div class="social-icons">
-                <a href="#" class="social-btn">
-                    <img src="fb-icon.png" alt="Facebook">
-                </a>
-                <a href="#" class="social-btn">
-                    <img src="insta-icon.png" alt="Instagram">
-                </a>
-                <a href="#" class="social-btn">
-                    <img src="tiktok-icon.png" alt="TikTok">
-                </a>
-            </div>
+         <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/OzConnectEdu/" target="_blank" aria-label="Facebook">
+                        <img src="{{ asset('image/facebook.webp') }}" alt="Facebook">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/oz_connect_education.visa.syd/" target="_blank"
+                        aria-label="Instagram">
+                        <img src="{{ asset('image/instagram.webp') }}" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@ozconnectedu_consultant" target="_blank" aria-label="TikTok">
+                        <img src="{{ asset('image/tiktok.logo.avif') }}" alt="TikTok">
+                    </a>
+                </li>
+            </ul>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 INN Group. Crafted with precision.</p>
+        <p>© 2026 INN Group. Created By Ramro Soft.</p>
     </div>
 </footer>

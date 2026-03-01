@@ -24,7 +24,7 @@
     <img src="{{ asset('image/homeloan.jpg') }}" alt="Home Loans">
     <h3>Home Loans</h3>
     <p>Helping first home buyers and investors get the best  deals.</p>
-    <a href="https://homeloansite.com" target="_blank">Learn More</a>
+    <a href="http://innovativewealth.com.au/" target="_blank">Learn More</a>
   </div>
   <div class="card">
     <img src="{{ asset('image/insurance.jpg') }}" alt="Insurance">
@@ -33,3 +33,5 @@
     <a href="https://insurancesite.com" target="_blank">Learn More</a>
   </div>
 </section>
+
+
